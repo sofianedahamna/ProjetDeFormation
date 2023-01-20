@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @author GRICOLAT Didier
+ * @author sofiane dahamna
  */
 interface iModel {
 

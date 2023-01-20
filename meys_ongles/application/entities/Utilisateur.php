@@ -9,9 +9,9 @@
 /**
  * Description of utilisateur
  *
- * @author didie
+ * @author sofiane dahamna
  */
-abstract class Utilisateur {
+ class Utilisateur {
 
     protected $_id;
     protected $_civiliter;
@@ -19,10 +19,10 @@ abstract class Utilisateur {
     protected $_prenom;
     protected $_email;
     protected $_telephone;
+    protected $_age;
     protected $_login;
     protected $_password;
-    protected $_age;
-
+    
     static function passwordGenerator() {
         return uniqid();
     }

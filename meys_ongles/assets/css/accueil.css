@@ -2,6 +2,7 @@ html,
 body {
     width: 100%;
     min-height: 100%;
+    background: rgb(255,255,255);
 }
 
 main {
@@ -18,14 +19,12 @@ main {
 #carte{
     position: sticky;
     z-index: 0;
+    margin-top: 100px;
+    background-color: black;
 
 }
-
-section{
-    margin-top: 75px;
-}
-
 footer{
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(247,170,4,1) 100%);
     margin-top: 75px;
 }
 a{
@@ -33,14 +32,16 @@ a{
     text-decoration: none;
     color:black;
 }
-a :hover{
-        color:rgb(255, 255, 255);
+.btn{
+    border-radius: 25px;
+}
+.nav-link:hover{
+        color:#1e1a1aad;
 }
 .nav-link{
-    color:rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
 }
 ul{
-    background-color:rgb(0, 0, 0);
     border-radius:30px;
 }
 .ms-auto{
@@ -95,7 +96,8 @@ input[type=date] {
 }
 
 .header {
-    background-color:  #fc466b !important;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(247,170,4,1) 100%);
 }
 
 #ctn_form_search {
@@ -108,10 +110,6 @@ input[type=date] {
 
 #tbl_result tr {
     text-align: center;
-}
-
-header {
-    background:#fc466b;
 }
 
 h1 {
@@ -135,10 +133,31 @@ button.btn-close {
     margin: 5px !important;
 
 }
-  .presentation{
+#presentation{
     width: 100%;
+    margin-top: 185px;
+  }
+  #ctn_presentation{
+    background-color: black;
+  }
+  #ctn_presentation>p{
+    color: azure;
+    font-size: x-large;
+    text-align: center;
   }
   #menu_footer{
-    color: rgb(255, 255, 255);
+    color: rgb(5, 5, 5);
 
+  }
+  #sous_titre{
+    width: 50%;
+    margin-right: 25%;
+    margin-left: 25%;
+  }
+  h1{
+    color: white;
+    background-color: black;
+  }
+  #sctn_carte{
+    margin-top: 75px;
   }

@@ -5,7 +5,7 @@
 /**
  * Description of Client
  *
- * @author GRICOLAT Didier
+ * @author soso
  */
 class Client extends Utilisateur implements JsonSerializable  {
 

@@ -21,11 +21,12 @@ main {
 
 }
 
-section{
+#form_inscription{
     margin-top: 75px;
 }
 
 footer{
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(247,170,4,1) 100%);
     margin-top: 75px;
 }
 a{
@@ -34,11 +35,13 @@ a{
     color:black;
 }
 .nav-link{
-    color:rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
 }
-ul{
-    background-color:rgb(0, 0, 0);
-    border-radius:30px;
+.nav-link :active{
+    color:rgb(0, 0, 0);
+}
+.nav-link:hover{
+    color:#1e1a1aad;
 }
 .ms-auto{
     margin-left: auto !important;
@@ -81,10 +84,20 @@ nav.mr-2 {
     display: table;
     border-radius: 30px;
 }
+#ss_ctn_from_right{
+    display: table-cell;
+    border-radius: 30px;
+}
 
 #ss_ctn_from_left {
-    display: table-cell;
+    display:table-cell;
      border-radius: 30px;
+     width: 100%;
+}
+#dd_ctn_adr_form{
+    display: table;
+    width: 100%;
+    border-spacing: 25px;
 }
 
 .dsply-no {
@@ -100,7 +113,7 @@ input[type=date] {
 }
 
 .header {
-    background-color:  #fc466b !important;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(247,170,4,1) 100%);
 }
 
 #ctn_form_search {
@@ -159,4 +172,7 @@ button.btn-close {
 }
 #form_connection{
     color: rgb(252, 252, 252);
+}
+#info_de_contact{
+    margin-top: 150px;
 }

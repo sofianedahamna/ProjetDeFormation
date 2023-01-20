@@ -3,7 +3,7 @@
 /**
  * Description of ManagerAuthentification
  *
- * @author GRICOLAT Didier
+ * @author sofiane dahamna
  */
 class ManagerAuthentificationClient {
 

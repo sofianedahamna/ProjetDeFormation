@@ -6,6 +6,8 @@
 
 class Realisation implements JsonSerializable{
 
+    private $_id;
+
     private $_prestation;
 
     private $_description;
@@ -64,4 +66,20 @@ function hydrate($params) {
 
 
 
+
+	/**
+	 * @return mixed
+	 */
+	public function get_id() {
+		return $this->_id;
+	}
+	
+	/**
+	 * @param mixed $_id 
+	 * @return self
+	 */
+	public function set_id($_id): self {
+		$this->_id = $_id;
+		return $this;
+	}
 }

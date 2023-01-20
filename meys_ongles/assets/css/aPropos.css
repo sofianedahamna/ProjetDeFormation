@@ -9,11 +9,10 @@ main {
     min-height: 100%;
 }
 
-section{
-    margin-top: 75px;
-}
+
 
 footer{
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(247,170,4,1) 100%);
     margin-top: 75px;
 }
 a{
@@ -22,17 +21,21 @@ a{
     color:black;
 }
 .nav-link{
-    color:rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
 }
 .nav-link :active{
-    color:rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+}
+.nav-link:hover{
+    color:#1e1a1aad;
 }
 ul{
-    background-color:rgb(0, 0, 0);
     border-radius:30px;
 }
 .titre_h_2{
     text-align: center;
+    background-color: black;
+    color: white;
 }
 #menu-top{
     position: fixed;
@@ -41,10 +44,21 @@ ul{
     z-index: 2;
     bottom: 54em;
 }
-.header {
-    background-color:  #fc466b !important;
+.header { 
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(247,170,4,1) 100%);
 }
 .ms-auto{
     margin-left: auto !important;
     margin-right: auto !important;
+}
+#information{
+    margin-top: 100px;
+}
+#cc_information_rdv{
+    margin-top: 250px;
+}
+#prise_rdv{
+    color: white;
+    background-color: black;
+    text-align: center;
 }

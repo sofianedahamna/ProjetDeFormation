@@ -30,7 +30,7 @@
 </head>
 
 <body>
-    <header id="menu-top" class="navbar navbar-expand-md navbar-dark header mt-0 px-3">
+    <header  class="navbar navbar-expand-md  header mt-0 px-3 fixed-top">
 
         <section class="navbar ms-auto">
 
@@ -42,14 +42,6 @@
 
             <nav id="content_nav" class="collapse navbar-collapse   mr-2">
                 <ul class="navbar-nav navbar-pills justify-content-center ">
-                    <!--         <li class="nav-item dropdown" id="no_load">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Compte</a>
-                        <ul id="menu_prcpl" class="dropdown-menu dropdown" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Paramètres</a></li>
-                            <li id="btn_actn_logout"><a class="dropdown-item" href="#">Déconnexion</a></li>
-                        </ul>  
-                    </li>  -->
-
                     <li data-sctn-id="1" class="nav-item">
                         <a class="nav-link active" href="#">Accueil</a>
                     </li>
@@ -59,11 +51,11 @@
                     </li>
 
                     <li data-bs-toggle="offcanvas" data-bs-target="#offcanvas_sctn" class="nav-item">
-                        <a class="nav-link " href="../view/realisations.php">Nos réalisations</a>
+                        <a class="nav-link " href="https://www.instagram.com/meys_ongles/?igshid=YmMyMTA2M2Y%3D">Nos réalisations</a>
                     </li>
 
                     <li data-bs-toggle="offcanvas" data-bs-target="#offcanvas_sctn" class="nav-item">
-                        <a class="nav-link " href="../view/monEspace.php">Mon espace</a>
+                        <a class="nav-link " href="../view/monEspace.php">Inscription</a>
                     </li>
 
                     <li data-bs-toggle="offcanvas" data-bs-target="#offcanvas_sctn" class="nav-item">
@@ -71,111 +63,49 @@
                     </li>
 
                 </ul>
+                <div class="mt-0">
+                    <button class="btn  ms-auto"><a href="../view/authenticationClient.php" class="nav-link"  target="_blank" rel="noopener noreferrer">Mon Compte</a></button>
+                </div>
             </nav>
+
         </section>
     </header>
 
-
-    <!-- debut section carrousel -->
-    <section>
-
-
-    <div id="carouselExample" class="carousel slide">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="../../assets/img/IMG-20230103-WA0006-PhotoRoom (1).png" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-        <div class="container text-center">
-            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-                <div class="col">
-                    <div class="p-3">
-                        <img class="presentation" src="../../assets/imgCompresser/IMG-20230103-WA0006.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3">
-                        <img class="presentation" src="../../assets/imgCompresser/IMG-20230103-WA0006.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3">
-                        <img class="presentation" src="../../assets/imgCompresser/IMG-20230103-WA0006.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3">
-                        <img class="presentation" src="../../assets/imgCompresser/IMG-20230103-WA0006.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3">
-                        <img class="presentation" src="../../assets/imgCompresser/IMG-20230103-WA0006.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3">
-                        <img class="presentation" src="../../assets/imgCompresser/IMG-20230103-WA0006.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3">
-                        <img class="presentation" src="../../assets/imgCompresser/IMG-20230103-WA0006.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3">
-                        <img class="presentation" src="../../assets/imgCompresser/IMG-20230103-WA0006.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3">
-                        <img class="presentation" src="../../assets/imgCompresser/IMG-20230103-WA0006.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="p-3">
-                        <img class="presentation" src="../../assets/imgCompresser/IMG-20230103-WA0006.jpg" alt="">
-                    </div>
-                </div>
-            </div>
+    <section  id="presentation"  >
+        <div> 
+            <h1>PROTHÉSISTE ONGULAIRE PROFESSIONNELLE</h1>
+            <div><img id="sous_titre" src="../../assets/img/kisspng-underline-clip-art-underline-5abd3fb556e766.430994661522352053356.png" alt=""> </div>
+            
+        </div>
+        <div id ="ctn_presentation">
+        <p>Bienvenue chez Mey's ongles, votre expert en soins des ongles. <br> Nous sommes spécialisés dans la création de manucures et de pédicures de qualité supérieure, ainsi que dans les extensions d'ongles et les soins des cuticules. <br>
+Notre salon est équipé des dernières technologies et des produits les plus innovants pour vous offrir une expérience de soins des ongles de première classe.<br> Nous sommes également fiers de notre équipe de prothésistes ongulaires expérimentés et passionnés, qui sont là pour vous offrir des conseils personnalisés et des soins professionnels.
+Nous offrons une variété de services pour répondre à tous vos besoins en matière de soins des ongles, des manucures de base aux extensions d'ongles en gel ou en résine. Nous nous engageons à utiliser des produits de qualité supérieure et à suivre les protocoles d'hygiène les plus stricts pour assurer votre sécurité et votre confort. <br>
+Réservez votre rendez-vous dès maintenant et découvrez pourquoi nous sommes le choix numéro un pour les soins des ongles de qualité supérieure.  <br>Nous avons hâte de prendre soin de vous et de vous aider à avoir des ongles magnifiques pour toutes les occasions.</p>
         </div>
     </section>
-    <!-- fin section carrousel -->
+
+    
 
     <!-- debut section card -->
     <section id="carte">
 
-
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
+        <div class="container" ></div>
+        <div class="row row-cols-1 row-cols-md-3 g-2">
+            <div class="col-5 p-4">
                 <div class="card h-100">
                     <a href="../view/prestation.php"><img src="https://i.ebayimg.com/images/g/aaAAAOSw135h5rTr/s-l1600.jpg" class="card-img-top" alt="..."></a>
                     <div class="card-body">
                         <h5 class="card-title">Methode Americaine</h5>
                         <p class="card-text">La méthode de manucure américaine consiste à déposer une capsule spécifique sur votre ongle afin de le rallonger à la longueur souhaitée. Elles permettent de maintenir vos ongles tout en leur offrant une finition parfaite. Cette méthode alternative douce ne nécessite qu’un ponçage léger pour la retirer.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                     <div class="card-footer">
                         <small class="text-muted"></small>
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-5 p-4">
                 <div class="card h-100">
                     <a href="../view/prestation.php"> <img src="https://i.ebayimg.com/images/g/aaAAAOSw135h5rTr/s-l1600.jpg" class="card-img-top" alt="..."></a>
                     <div class="card-body">
@@ -187,7 +117,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-5 p-4">
                 <div class="card h-100">
                     <a href="../view/prestation.php"> <img src="https://i.ebayimg.com/images/g/aaAAAOSw135h5rTr/s-l1600.jpg" class="card-img-top" alt="..."></a>
                     <div class="card-body">
@@ -199,7 +129,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-5 p-4">
                 <div class="card h-100">
                     <a href="../view/prestation.php"> <img src="https://i.ebayimg.com/images/g/aaAAAOSw135h5rTr/s-l1600.jpg" class="card-img-top" alt="..."></a>
                     <div class="card-body">
@@ -211,7 +141,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-5 p-4">
                 <div class="card h-100 ">
                     <a href="../view/prestation.php"> <img src="https://assets.puzzlefactory.pl/puzzle/314/115/original.jpg" class="card-img-top" alt="..."></a>
                     <div class="card-body">
@@ -223,7 +153,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-5 p-4">
                 <div class="card h-100 ">
                     <a href="../view/prestation.php"> <img src="https://assets.puzzlefactory.pl/puzzle/314/115/original.jpg" class="card-img-top" alt="..."></a>
                     <div class="card-body">
@@ -243,7 +173,7 @@
     <!-- fin section card -->
 
     <!--debut section carte -->
-    <section>
+    <section id="sctn_carte">
 
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92456.81423888501!2d1.3628028940870522!3d43.60080618479869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebb6fec7552ff%3A0x406f69c2f411030!2sToulouse!5e0!3m2!1sfr!2sfr!4v1672840753609!5m2!1sfr!2sfr" width="600" height="450" style="border:0; width:100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
@@ -251,7 +181,7 @@
     <!--fin section carte -->
 
     <!-- Footer -->
-    <footer class="text-center text-lg-start text-white" style="background-color: #fc466b">
+    <footer class="text-center text-lg-start text-black" style="background-color: #fc466b">
         <!-- Grid container -->
         <div class="container p-4 pb-0">
             <!-- Section: Links -->
@@ -277,19 +207,19 @@
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 ">
                         <h6 class="text-uppercase mb-4 font-weight-bold">Menu</h6>
                         <p id="menu_footer">
-                            <a class="text-white" href="../view/accueil.php">Accueil</a>
+                            <a class="text-black" href="../view/accueil.php">Accueil</a>
                         </p>
                         <p>
-                            <a class="text-white" href="../view/prestation.php">Prestation</a>
+                            <a class="text-black" href="../view/prestation.php">Prestation</a>
                         </p>
                         <p>
-                            <a class="text-white" href="../view/realisations.php">Realisations</a>
+                            <a class="text-black" href="https://www.instagram.com/meys_ongles/?igshid=YmMyMTA2M2Y%3D">Realisations</a>
                         </p>
                         <p>
-                            <a class="text-white" href="../view/monEspace.php">Mon Espace</a>
+                            <a class="text-black" href="../view/monEspace.php">Mon Espace</a>
                         </p>
                         <p>
-                            <a class="text-white" href="../view/aPropos.php">A Propos</a>
+                            <a class="text-black" href="../view/aPropos.php">A Propos</a>
                         </p>
                     </div>
                     <!-- Grid column -->
@@ -319,7 +249,7 @@
                         <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"><i class="fab fa-google"></i></a>
 
                         <!-- Instagram -->
-                        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="https://www.instagram.com/meys_ongles/?igshid=YmMyMTA2M2Y%3D" role="button"><i class="fab fa-instagram"></i></a>
 
                     </div>
                 </div>

@@ -11,11 +11,11 @@ class Prestation implements JsonSerializable{
 
     private $_id;
 
-    private $_titre;
+    private $_libelle;
+
+    private $_description;
     
     private $_prix;
-
-    private $_prestation;
 
     private $_duree;
 
@@ -65,24 +65,9 @@ function hydrate($params) {
 		return $this;
 	}
 
-	/**
-	 * @return mixed
-	 */
-	public function get_prestation() {
-		return $this->_prestation;
-	}
-
-	/**
-	 * @param mixed $_prestation 
-	 * @return self
-	 */
-	public function set_prestation($_prestation): self {
-		$this->_prestation = $_prestation;
-		return $this;
-	}
 
     public function jsonSerialize(){
-        return ["titre"=>$this->get_titre(), "prix"=>$this-> get_prix(),"prestation"=> $this-> get_prestation(),"duree"=> $this-> get_duree()];
+        return ["libelle"=>$this->get_libelle(),"description"=>$this->get_description(), "prix"=>$this-> get_prix(),"duree"=> $this-> get_duree()];
     }
 
 	/**
@@ -104,16 +89,32 @@ function hydrate($params) {
 	/**
 	 * @return mixed
 	 */
-	public function get_titre() {
-		return $this->_titre;
+	public function get_libelle() {
+		return $this->_libelle;
 	}
 	
 	/**
-	 * @param mixed $_titre 
+	 * @param mixed $_libelle 
 	 * @return self
 	 */
-	public function set_titre($_titre): self {
-		$this->_titre = $_titre;
+	public function set_libelle($_libelle): self {
+		$this->_libelle = $_libelle;
+		return $this;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function get_description() {
+		return $this->_description;
+	}
+	
+	/**
+	 * @param mixed $_description 
+	 * @return self
+	 */
+	public function set_description($_description): self {
+		$this->_description = $_description;
 		return $this;
 	}
 }

@@ -26,10 +26,10 @@
 </head>
 
 <body>
-    <header class="navbar navbar-expand-md navbar-dark header">
+    <header class="navbar navbar-expand-md  header fixed-top">
 
         <section class="navbar ms-auto ">
-            <nav class="mr-2">
+            <nav class="collapse navbar-collapse mr-2">
                 <ul class="navbar-nav navbar-pills justify-content-center ">
                     <!--         <li class="nav-item dropdown" id="no_load">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Compte</a>
@@ -47,7 +47,7 @@
                     </li>
 
                     <li data-bs-toggle="offcanvas" data-bs-target="#offcanvas_sctn" class="nav-item">
-                        <a class="nav-link " href="../view/realisations.php">Nos réalisations</a>
+                        <a class="nav-link " href="https://www.instagram.com/meys_ongles/?igshid=YmMyMTA2M2Y%3D">Nos réalisations</a>
                     </li>
 
                     <li data-bs-toggle="offcanvas" data-bs-target="#offcanvas_sctn" class="nav-item">
@@ -60,6 +60,9 @@
                     </li>
 
                 </ul>
+                <div class="mt-0">
+                    <button class="btn  ms-auto"><a href="../view/authenticationClient.php" class="nav-link"  target="_blank" rel="noopener noreferrer">Mon Compte</a></button>
+                </div>
             </nav>
         </section>
     </header>
@@ -102,75 +105,42 @@
                         <label class="form-label" for="dateAnniversaire_utlstr">Date anniversaire</label>
                         <input class="form-control" type="date" id="dateAnniversaire_utlstr" name="dateAnniversaire_utlstr" required>
                     </div>
-                    <div class="mt-4">
-                        <input class="btn btn-success btn-lg ms-auto" type="submit" value="S'inscrire">
-                    </div>
                     </fieldset>
                 </div>
 
-
+            </div>
+            <div id="dd_ctn_adr_form">
+                <div id="ss_ctn_from_left" class="p-3 bg-dark border">
+                    <legend>Mon Adresse</legend>
+                    <div class="mb-2">
+                        <label class="form-label" for="numeroDeVoie_utlstr">Numero de voie</label>
+                        <input class="form-control" type="text" id="numeroDeVoie_utlstr" name="numeroDeVoie_utlstr" required>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label" for="libelleVoie_utlstr">Libelle de voie</label>
+                        <input class="form-control" type="text" id="libelleVoie_utlstr" name="libelleVoie_utlstr" required>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label" for="ville_utlstr">Ville</label>
+                        <input class="form-control" type="text" id="ville_utlstr" name="ville_utlstr" required>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label" for="codePostal_utlstr">Code postal</label>
+                        <input class="form-control" type="text" id="codePostal_utlstr" name="codePostal_utlstr" required>
+                    </div>
+                    <div class="mt-0">
+                        <input class="btn btn-success btn-lg ms-auto" type="submit" value="S'inscrire">
+                    </div>
+                </div>
+            </div>
             </div>
         </form>
     </section>
-
-    <section>
-        <h2 class="titre_h_2">Me Connecter</h2>
-        <form id="form_connection" method="post" action="/application/controller/authentification.php">
-    <div id="sec_ctn_form">
-
-        <div id="sec_ctn_form" class="p-3 bg-dark border">
-                <input type="hidden" name="action" value="login">
-            <div class="mb-2">
-                <label class="form-label">Login</label>
-                <i class="fa-solid fa-key"></i>
-                <input class="form-control" autocomplete="email" type="text" name="identifiant">
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Mot de passe</label>
-                <i class="fa-solid fa-eye"></i>
-                <input class="form-control" type="password" name="password">
-            </div>
-            <div class="ajust-ctn-btn">
-                <input type="submit" class="btn btn-secondary mt-3 " value="Connexion">
-            </div>
-        </div>
-    </div>
-        </form>
-
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
     <!-- Footer -->
-    <footer class="text-center text-lg-start text-white" style="background-color: #fc466b">
+    <footer class="text-center text-lg-start text-black fixed-bottoms" style="background-color: #fc466b">
         <!-- Grid container -->
         <div class="container p-4 pb-0">
             <!-- Section: Links -->
@@ -196,19 +166,19 @@
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold">Menu</h6>
                         <p>
-                            <a class="text-white" href="../view/accueil.php">Accueil</a>
+                            <a class="text-black" href="../view/accueil.php">Accueil</a>
                         </p>
                         <p>
-                            <a class="text-white" href="../view/prestation.php">Prestation</a>
+                            <a class="text-black" href="../view/prestation.php">Prestation</a>
                         </p>
                         <p>
-                            <a class="text-white" href="../view/realisations.php">Realisations</a>
+                            <a class="text-black" href="https://www.instagram.com/meys_ongles/?igshid=YmMyMTA2M2Y%3D">Realisations</a>
                         </p>
                         <p>
-                            <a class="text-white" href="../view/monEspace.php">Mon Espace</a>
+                            <a class="text-black" href="../view/monEspace.php">Mon Espace</a>
                         </p>
                         <p>
-                            <a class="text-white" href="../view/aPropos.php">A Propos</a>
+                            <a class="text-black" href="../view/aPropos.php">A Propos</a>
                         </p>
                     </div>
                     <!-- Grid column -->
@@ -238,7 +208,7 @@
                         <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"><i class="fab fa-google"></i></a>
 
                         <!-- Instagram -->
-                        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="https://www.instagram.com/meys_ongles/?igshid=YmMyMTA2M2Y%3D" role="button"><i class="fab fa-instagram"></i></a>
 
                     </div>
                 </div>
