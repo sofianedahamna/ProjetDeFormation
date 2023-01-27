@@ -13,11 +13,11 @@
  */
  class Adresse{
 
-	protected $_id;
-    protected $_numDeVoie;
-    protected $_libelleVoie;
-    protected $_ville;
-    protected $_codePostal;
+	private $_id;
+    private $_numerodeVoie;
+    private $_libelledeVoie;
+    private $_ville;
+    private $_codePostal;
 
 
 	function __construct($params) {
@@ -50,8 +50,8 @@
 	 * @param mixed $_ville 
 	 * @return Adresse
 	 */
-	function setVille($_ville): self {
-		$this->_ville = $_ville;
+	function setVille($ville): self {
+		$this->_ville = $ville;
 		return $this;
 	}
 	
@@ -68,8 +68,8 @@
 	 * @param mixed $_codePostal 
 	 * @return Adresse
 	 */
-	function setCodePostal($_codePostal): self {
-		$this->_codePostal = $_codePostal;
+	function setCodePostal($codePostal): self {
+		$this->_codePostal = $codePostal;
 		return $this;
 	}
 	/**
@@ -92,42 +92,40 @@
 	 * @param mixed $_id 
 	 * @return Adresse
 	 */
-	function setId($_id): self {
-		$this->_id = $_id;
+	function setId($id): self {
+		$this->_id = $id;
 		return $this;
 	}
+
 	/**
-	 * 
 	 * @return mixed
 	 */
-	function getNumDeVoie() {
-		return $this->_numDeVoie;
+	public function getlibelledeVoie() {
+		return $this->_libelledeVoie;
 	}
-	
+
 	/**
-	 * 
-	 * @param mixed $_numeroDeVoie 
-	 * @return Adresse
+	 * @param mixed $_libelledeVoie 
+	 * @return self
 	 */
-	function setNumDeVoie($_numDeVoie): self {
-		$this->_numDeVoie = $_numDeVoie;
+	public function setlibelledeVoie($libelledeVoie): self {
+		$this->_libelledeVoie = $libelledeVoie;
 		return $this;
 	}
+
 	/**
-	 * 
 	 * @return mixed
 	 */
-	function getLibelleVoie() {
-		return $this->_libelleVoie;
+	public function getnumerodeVoie() {
+		return $this->_numerodeVoie;
 	}
-	
+
 	/**
-	 * 
-	 * @param mixed $_libelleVoie 
-	 * @return Adresse
+	 * @param mixed $_numerodeVoie 
+	 * @return self
 	 */
-	function setLibelleVoie($_libelleVoie): self {
-		$this->_libelleVoie = $_libelleVoie;
+	public function setnumerodeVoie($numerodeVoie): self {
+		$this->_numerodeVoie = $numerodeVoie;
 		return $this;
 	}
 }

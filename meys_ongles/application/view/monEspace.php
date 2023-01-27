@@ -11,7 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../../assets/css/monEspace.css">
-    <script src="/assets/js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function() {
             $(".nav-link").mouseenter(function(e) {
@@ -21,8 +21,162 @@
 
             });
 
+            /*==============================================================
+            *                       definition de ajax
+            ===============================================================*/
+
+            var ajaxOptions = {
+                method: "POST",
+                cache: false,
+                async: true,
+                timeout: 3000,
+                dataType: "json",
+                processData: false,
+                contentType: false
+            };
+
+            /*====================================================================================
+            * Soumission des données formulaire inscription est verification des valeur des champ 
+            ======================================================================================*/
+            /** $("#form_inscription").submit(function(e) {
+                 e.preventDefault();
+                 inscriptionClient();
+
+             });*/
+            $("#form_inscription").submit(function(e) {
+                e.preventDefault();
+                if (!$("input[name='nom_utlstr']").val() ||
+                    !$("input[name='prenom_utlstr']").val() ||
+                    !$("input[name='email_utlstr']").val() ||
+                    !$("input[name='telephone_utlstr']").val() ||
+                    !$("input[name='dateDeNaissance_utlstr']").val() ||
+                    !$("input[name='motDePasse_utlstr']").val()) {
+                    // $("#error-modal").modal("show");
+                    alert('Vous avez mal rempli le formulaire');
+
+                } else {
+                    inscriptionClient();
+                }
+            });
+
+            $(document).ready(function() {
+                $("#form_inscription").on('input', function() {
+                    var nom = $("#nom").val();
+                    var prenom = $("#prenom").val();
+                    var email = $("#email").val();
+                    var telephone = $("#telephone").val();
+                    var login = $("#login").val();
+                    var motDePasse = $("#motDePasse").val();
+                    var numerodeVoie = $("#numerodeVoie").val();
+                    var libelledeVoie = $("#libelledeVoie").val();
+                    var ville = $("#ville").val();
+                    var codePostal = $("#codePostal").val();
+
+                    if (nom.length < 2) {
+                        $("#nom").addClass("is-invalid");
+                    } else {
+                        $("#nom").removeClass("is-invalid");
+                    }
+                    if (prenom.length < 2) {
+                        $("#prenom").addClass("is-invalid");
+                    } else {
+                        $("#prenom").removeClass("is-invalid");
+                    }
+                    if (!email.includes("@") || !email.includes(".")) {
+                        $("#email").addClass("is-invalid");
+                    } else {
+                        $("#email").removeClass("is-invalid");
+                    }
+                    if (telephone.length != 10) {
+                        $("#telephone").addClass("is-invalid");
+                    } else {
+                        $("#telephone").removeClass("is-invalid");
+                    }
+                    if (login.length < 2) {
+                        $("#login").addClass("is-invalid");
+                    } else {
+                        $("#login").removeClass("is-invalid");
+                    }
+                    if (motDePasse.length < 8) {
+                        $("#motDePasse").addClass("is-invalid");
+                    } else {
+                        $("#motDePasse").removeClass("is-invalid");
+                    }
+                    if (numerodeVoie.length < 2) {
+                        $("#numerodeVoie").addClass("is-invalid");
+                    } else {
+                        $("#numerodeVoie").removeClass("is-invalid");
+                    }
+                    if (libelledeVoie.length < 2) {
+                        $("#libelledeVoie").addClass("is-invalid");
+                    } else {
+                        $("#libelledeVoie").removeClass("is-invalid");
+                    }
+                    if (ville.length < 2) {
+                        $("#ville").addClass("is-invalid");
+                    } else {
+                        $("#ville").removeClass("is-invalid");
+                    }
+                    if (codePostal.length != 5) {
+                        $("#codePostal").addClass("is-invalid");
+                    } else {
+                        $("#codePostal").removeClass("is-invalid");
+                    }
+                });
+            });
+            /**************************************************************
+             *              Fonction Enregistrement des données client    *
+             **************************************************************/
+            function inscriptionClient() {
+                var form = $("#form_inscription").get(0);
+                var url = form.getAttribute("action");
+                var formData = new FormData(form);
+                ajaxOptions.data = formData;
+                ajaxOptions.url = url;
+                $.ajax(ajaxOptions).done(function(clbck) {
+                    if (clbck.err_flag) {
+                        alert(clbck.err_msg);
+                    } else {
+                        window.location.replace("http://meysongles.fr/application/view/authenticationClient.php");
+                    }
+                }).fail(function(e) {
+                    console.log(e);
+                    alert("Error!");
+                }).always(function() {});
+            };
+
+            /***********************************************************************
+             *          Fonction reset form inscription lancement dialog info
+             ***********************************************************************/
+            function reset_form() {
+                $("#form_inscription")[0].reset();
+                //$("#bt_submit").prop({disabled: true});
+            }
+
+
+            let launchDialogInfo = function(elemetText) {
+                $("#dialogInfo div.modal-body").html(elemetText);
+                $("#btn_show_dialog_info").click();
+            }
+
+
         });
     </script>
+    <style>
+        /* configuration des fenêtres modales */
+        .modal-header {
+            padding: 0.5rem 0.5rem !important;
+        }
+
+        /*Réajustement de positionnement de la fenêtre modal au centre */
+        #dialogInfo .modal-dialog {
+            position: fixed;
+            width: 100% !important;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </head>
 
 <body>
@@ -61,7 +215,7 @@
 
                 </ul>
                 <div class="mt-0">
-                    <button class="btn  ms-auto"><a href="../view/authenticationClient.php" class="nav-link"  target="_blank" rel="noopener noreferrer">Mon Compte</a></button>
+                    <button class="btn  ms-auto"><a href="../view/authenticationClient.php" class="nav-link" target="_blank" rel="noopener noreferrer">Mon Compte</a></button>
                 </div>
             </nav>
         </section>
@@ -72,7 +226,7 @@
 
     <section id="info_de_contact">
         <h2 class="titre_h_2">M'inscrire</h2>
-        <form id="form_inscription" action="http://cakeorderold.fr/application/controller/inscription.php" method="post" enctype="application/x-www-form-urlencoded">
+        <form id="form_inscription" action="../controlleur/inscriptionController.php" method="POST" enctype="application/x-www-form-urlencoded">
             <div id="ss_ctn_from">
                 <input type="hidden" name="action" value="inscription">
                 <div id="ss_ctn_from_left" class="p-3 bg-dark border">
@@ -102,9 +256,14 @@
                         <input class="form-control" type="text" id="telephone_utlstr" name="telephone_utlstr" required>
                     </div>
                     <div class="mb-2">
-                        <label class="form-label" for="dateAnniversaire_utlstr">Date anniversaire</label>
-                        <input class="form-control" type="date" id="dateAnniversaire_utlstr" name="dateAnniversaire_utlstr" required>
+                        <label class="form-label" for="motDePasse_utlstr">Mot de Passe</label>
+                        <input class="form-control" type="password" id="motDePasse_utlstr" name="motDePasse_utlstr" required>
                     </div>
+                    <div class="mb-2">
+                        <label class="form-label" for="dateDeNaissance_utlstr">Date anniversaire</label>
+                        <input class="form-control" type="date" id="dateDeNaissance_utlstr" name="dateDeNaissance_utlstr" required>
+                    </div>
+
                     </fieldset>
                 </div>
 
@@ -113,12 +272,12 @@
                 <div id="ss_ctn_from_left" class="p-3 bg-dark border">
                     <legend>Mon Adresse</legend>
                     <div class="mb-2">
-                        <label class="form-label" for="numeroDeVoie_utlstr">Numero de voie</label>
-                        <input class="form-control" type="text" id="numeroDeVoie_utlstr" name="numeroDeVoie_utlstr" required>
+                        <label class="form-label" for="numerodeVoie_utlstr">Numero de voie</label>
+                        <input class="form-control" type="text" id="numerodeVoie_utlstr" name="numerodeVoie_utlstr" required>
                     </div>
                     <div class="mb-2">
-                        <label class="form-label" for="libelleVoie_utlstr">Libelle de voie</label>
-                        <input class="form-control" type="text" id="libelleVoie_utlstr" name="libelleVoie_utlstr" required>
+                        <label class="form-label" for="libelledeVoie_utlstr">Libelle de voie</label>
+                        <input class="form-control" type="text" id="libelledeVoie_utlstr" name="libelledeVoie_utlstr" required>
                     </div>
                     <div class="mb-2">
                         <label class="form-label" for="ville_utlstr">Ville</label>
@@ -137,7 +296,21 @@
         </form>
     </section>
 
+    <!-- Start Popupmodal infos-->
+    <span id="btn_show_dialog_info" data-bs-toggle="modal" data-bs-target="#dialogInfo"></span>
+    <div id="dialogInfo" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <div class="h6 modal-title">Informations</div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body"></div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Stop Popupmodal infos -->
 
     <!-- Footer -->
     <footer class="text-center text-lg-start text-black fixed-bottoms" style="background-color: #fc466b">
@@ -153,9 +326,7 @@
                             Mey's ongles
                         </h6>
                         <p>
-                            Here you can use rows and columns to organize your footer
-                            content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit.
+                            Bienvenue chez Mey's Ongles.
                         </p>
                     </div>
                     <!-- Grid column -->
@@ -219,6 +390,7 @@
         <!-- Grid container -->
     </footer>
     <!-- Footer -->
+
 </body>
 
 </html>

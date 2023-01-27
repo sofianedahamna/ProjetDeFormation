@@ -5,7 +5,7 @@
  */
 interface iModel {
 
-    public function add(object $datas): array;
+    public function add(object $datas,object $datas2): array;
     public function delete($params);
 
     public function update($params);

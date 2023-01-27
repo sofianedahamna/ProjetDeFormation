@@ -21,8 +21,27 @@
 
             });
 
+
+
+            let launchDialogInfo = function(elemetText) {
+                $("#dialogInfo div.modal-body").html(elemetText);
+                $("#btn_show_dialog_info").click();
+            }
+
+
         });
     </script>
+    <style>
+        #offcanvas_sctn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 550px;
+            min-height: 450px;
+            max-height: 450px;
+        }
+    </style>
 
 
 
@@ -30,7 +49,7 @@
 </head>
 
 <body>
-    <header  class="navbar navbar-expand-md  header mt-0 px-3 fixed-top">
+    <header class="navbar navbar-expand-md  header mt-0 px-3 fixed-top">
 
         <section class="navbar ms-auto">
 
@@ -61,36 +80,35 @@
                     <li data-bs-toggle="offcanvas" data-bs-target="#offcanvas_sctn" class="nav-item">
                         <a class="nav-link " href="../view/aPropos.php">A propos</a>
                     </li>
-
+                    <li data-bs-toggle="offcanvas" data-bs-target="#offcanvas_sctn" class="nav-item">
+                        <a class="nav-link " href="#">Mon Compte</a>
+                    </li>
                 </ul>
-                <div class="mt-0">
-                    <button class="btn  ms-auto"><a href="../view/authenticationClient.php" class="nav-link"  target="_blank" rel="noopener noreferrer">Mon Compte</a></button>
-                </div>
             </nav>
 
         </section>
     </header>
 
-    <section  id="presentation"  >
-        <div> 
+    <section id="presentation">
+        <div>
             <h1>PROTHÉSISTE ONGULAIRE PROFESSIONNELLE</h1>
             <div><img id="sous_titre" src="../../assets/img/kisspng-underline-clip-art-underline-5abd3fb556e766.430994661522352053356.png" alt=""> </div>
-            
+
         </div>
-        <div id ="ctn_presentation">
-        <p>Bienvenue chez Mey's ongles, votre expert en soins des ongles. <br> Nous sommes spécialisés dans la création de manucures et de pédicures de qualité supérieure, ainsi que dans les extensions d'ongles et les soins des cuticules. <br>
-Notre salon est équipé des dernières technologies et des produits les plus innovants pour vous offrir une expérience de soins des ongles de première classe.<br> Nous sommes également fiers de notre équipe de prothésistes ongulaires expérimentés et passionnés, qui sont là pour vous offrir des conseils personnalisés et des soins professionnels.
-Nous offrons une variété de services pour répondre à tous vos besoins en matière de soins des ongles, des manucures de base aux extensions d'ongles en gel ou en résine. Nous nous engageons à utiliser des produits de qualité supérieure et à suivre les protocoles d'hygiène les plus stricts pour assurer votre sécurité et votre confort. <br>
-Réservez votre rendez-vous dès maintenant et découvrez pourquoi nous sommes le choix numéro un pour les soins des ongles de qualité supérieure.  <br>Nous avons hâte de prendre soin de vous et de vous aider à avoir des ongles magnifiques pour toutes les occasions.</p>
+        <div id="ctn_presentation">
+            <p>Bienvenue chez Mey's ongles, votre expert en soins des ongles. <br> Nous sommes spécialisés dans la création de manucures et de pédicures de qualité supérieure, ainsi que dans les extensions d'ongles et les soins des cuticules. <br>
+                Notre salon est équipé des dernières technologies et des produits les plus innovants pour vous offrir une expérience de soins des ongles de première classe.<br> Nous sommes également fiers de notre équipe de prothésistes ongulaires expérimentés et passionnés, qui sont là pour vous offrir des conseils personnalisés et des soins professionnels.
+                Nous offrons une variété de services pour répondre à tous vos besoins en matière de soins des ongles, des manucures de base aux extensions d'ongles en gel ou en résine. Nous nous engageons à utiliser des produits de qualité supérieure et à suivre les protocoles d'hygiène les plus stricts pour assurer votre sécurité et votre confort. <br>
+                Réservez votre rendez-vous dès maintenant et découvrez pourquoi nous sommes le choix numéro un pour les soins des ongles de qualité supérieure. <br>Nous avons hâte de prendre soin de vous et de vous aider à avoir des ongles magnifiques pour toutes les occasions.</p>
         </div>
     </section>
 
-    
+
 
     <!-- debut section card -->
     <section id="carte">
 
-        <div class="container" ></div>
+        <div class="container"></div>
         <div class="row row-cols-1 row-cols-md-3 g-2">
             <div class="col-5 p-4">
                 <div class="card h-100">
@@ -171,6 +189,32 @@ Réservez votre rendez-vous dès maintenant et découvrez pourquoi nous sommes l
 
     </section>
     <!-- fin section card -->
+    <section class="offcanvas fade offcanvas-end p-4 rounded" id="offcanvas_sctn">
+        <section class="offcanvas-header">
+            <h2 class="offcanvas-title">Connexion</h2>
+            <button class="btn  btn-close" data-bs-dismiss="offcanvas"></button>
+        </section>
+        <section class="offcanvas-body">
+            <form method="post" action="../controlleur/authentificationClient.php">
+                <input type="hidden" name="action" value="login">
+                <div class="mb-2">
+                    <label class="form-label">Login</label>
+                    <i class="fa-solid fa-key"></i>
+                    <input class="form-control" type="text" name="identifiant">
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Password</label>
+                    <i class="fa-solid fa-eye"></i>
+                    <input class="form-control" type="password" name="password">
+                </div>
+                <div class="ajust-ctn-btn">
+                    <input type="submit" class="btn btn-secondary mt-3 " value="Connexion">
+                </div>
+            </form>
+        </section>
+    </section>
+
+
 
     <!--debut section carte -->
     <section id="sctn_carte">

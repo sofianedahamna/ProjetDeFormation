@@ -7,8 +7,8 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
-        <base href="http://cakeorderold.fr" >
+        <title>Connexion au compte</title>
+        <base href="http://meysongles.fr" >
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -32,7 +32,7 @@ and open the template in the editor.
     <body>
         <main >
             <section id="sctn_from_cnx" class="p-4 border rounded bg-light">
-                <form method="post" action="http://cakeorderold.fr/application/controller/authentificationClient.php">
+                <form method="post" action="http://meysongles.fr/application/controlleur/authentificationClient.php">
                     <input type="hidden" name="action" value="login">
                     <div  class="mb-2">
                         <label class="form-label">Login</label>
@@ -40,9 +40,9 @@ and open the template in the editor.
                         <input class="form-control" type="text" name="identifiant">
                     </div>
                     <div  class="mb-2">
-                        <label class="form-label">Password</label>
+                        <label class="form-label">Mot de Passe</label>
                         <i class="fa-solid fa-eye"></i>
-                        <input class="form-control" type="password" name="password">
+                        <input class="form-control" type="password" name="motDePasse">
                     </div>
                     <div  class="ajust-ctn-btn">
                         <input type="submit" class="btn btn-secondary mt-3 " value="Connexion" >

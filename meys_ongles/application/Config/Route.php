@@ -2,8 +2,8 @@
 class Route
 {
 
-    const DEFAULT_VIEW = "http://localhost/dossier_type_mvc/application/view/authentification.php";
-    const DEFAULT_SCHEME_VIEWS = "http://localhost/dossier_type_mvc/application/view/";
+    const DEFAULT_VIEW = "http://localhost/meys_ongles/application/view/authenticationClient.php";
+    const DEFAULT_SCHEME_VIEWS = "http://localhost/meys_ongles/application/view/accueil.php";
 
     function __construct($route = "default")
     {

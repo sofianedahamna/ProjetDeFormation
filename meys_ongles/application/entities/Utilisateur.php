@@ -23,10 +23,10 @@
     protected $_login;
     protected $_password;
     
-    static function passwordGenerator() {
+  /**  static function passwordGenerator() {
         return uniqid();
     }
-
+    */ 
     function getId() {
         return $this->_id;
     }
